@@ -24,13 +24,13 @@ for line in fd:
 for prijmeni in zaci.keys():
     print(f"*{zaci[prijmeni]}*-{prijmeni}-")
 
-# výpis počtu žáků se stejným křestním jménem
+# počítání žáků se stejným křestním jménem
     if zaci[prijmeni] in pocty_krestni:
         pocty_krestni[zaci[prijmeni]] += 1
     else:
         pocty_krestni[zaci[prijmeni]] = 1
 
-# najít jméno s největším zastoupením
+# najít a vypsat jméno s největším zastoupením
 nejcastejsi_jmeno = max(pocty_krestni, key=pocty_krestni.get)
 print(f"\nJméno s největším zastoupením je {nejcastejsi_jmeno} s počtem {pocty_krestni[nejcastejsi_jmeno]}")
 
